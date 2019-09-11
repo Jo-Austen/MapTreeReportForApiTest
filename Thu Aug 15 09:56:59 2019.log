@@ -1,0 +1,16 @@
+2019-08-15 09:57:00,282 | MainThread | INFO | TestSuite01:NoLogin_ad | PASSD | c3fab60fd9 | Expect:体验中 == Output:体验中
+2019-08-15 09:57:00,674 | MainThread | ERROR | TestSuite01:NoLogin_ad | ERROR | 7fed0c5405 | Expect:体验中 != Output:None
+2019-08-15 09:57:00,834 | MainThread | INFO | TestSuite01:NoLogin_ad | PASSD | 0f19a98bcd | Expect:体验中 == Output:体验中
+2019-08-15 09:57:00,932 | MainThread | INFO | TestSuite01:NoLogin_ad | PASSD | 083FF4B3-0 | Expect:None == Output:None
+2019-08-15 09:57:00,282 | MainThread | INFO | TestSuite02:NoLogin_ad | PASSD | c3fab60fd9 | Expect:体验中 == Output:体验中
+2019-08-15 09:57:00,674 | MainThread | ERROR | TestSuite21:NoLogin_ad | ERROR | 7fed0c5405 | Expect:体验中 != Output:None
+2019-08-15 09:57:00,834 | MainThread | INFO | TestSuite03:NoLogin_ad | PASSD | 0f19a98bcd | Expect:体验中 == Output:体验中
+2019-08-15 09:57:00,932 | MainThread | INFO | TestSuite03:NoLogin_ad | PASSD | 083FF4B3-0 | Expect:None == Output:None
+2019-08-15 09:57:00,834 | MainThread | INFO | TestSuite03:NoLogin_ad | PASSD | 0f19a98bcd | Expect:体验中 == Output:体验中
+2019-08-15 09:57:00,932 | MainThread | INFO | TestSuite04:NoLogin_ad | ERROR | 083FF4B3-0 | Expect:None == Output:None
+2019-08-15 09:57:00,834 | MainThread | INFO | TestSuite02:NoLogin_ad | PASSD | 0f19a98bcd | Expect:体验中 == Output:体验中
+2019-08-15 09:57:00,932 | MainThread | INFO | TestSuite04:NoLogin_ad | PASSD | 083FF4B3-0 | Expect:None == Output:None
+2019-08-15 09:57:00,834 | MainThread | INFO | TestSuite04:NoLogin_ad | PASSD | 0f19a98bcd | Expect:体验中 == Output:体验中
+2019-08-15 09:57:00,932 | MainThread | INFO | TestSuite04:NoLogin_ad | PASSD | 083FF4B3-0 | Expect:None == Output:None
+2019-08-15 09:57:00,834 | MainThread | INFO | TestSuite04:NoLogin_ad | PASSD | 0f19a98bcd | Expect:体验中 == Output:体验中
+2019-08-15 09:57:00,932 | MainThread | INFO | TestSuite05:NoLogin_ad | PASSD | 083FF4B3-0 | Expect:None == Output:None
