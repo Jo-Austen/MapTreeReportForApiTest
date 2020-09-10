@@ -1,0 +1,228 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/600753 (zh-CN, DDL); Windows/10.0.0 (Win64);"/>
+  <meta name="content-class" content="yinxiang.markdown"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="411"/>
+
+<div><span><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><div style="line-height: 160%; box-sizing: content-box;"><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">1. 集合概述
+</a><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">1.1 集合体系结构
+</a></li></ul></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">2. Collection
+</a><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">1. 概述
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">2. collection集合常用方法
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">3. collection集合的遍历
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">4. 增强for循环遍历
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">5. 集合的使用步骤
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">6. 案例-存储学生对象的集合
+</a></li></ul></li></ul></div><h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">1. 集合概述</h2>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">多个数据，且数据个数可变时使用集合</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">集合的特点：提供一种存储空间可变的存储模型，存储的数据容量可以发生变化</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">内部存储对象，不能存储基本数据类型，除非将其转为包装类</li>
+</ul>
+</blockquote>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">1.1 集合体系结构</h4>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">Collection是单列集合接口，Map是双列集合接口</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">List和Set都为Collection的子类接口，List中元素可重复，Set中的元素不可重复</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">以上提到的均为接口，需通过实现类来调用其方法</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">Collection接口没有直接实现类，通过其子接口的实现类调用其方法（ArrayList等）<br/>
+<img src="集合01-Collection_files/Image.png" type="image/png" data-filename="Image.png"/></li>
+</ul>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">2. Collection</h2>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">1. 概述</h4>
+<blockquote style="line-height: 160%; box-sizing: content-box; margin: 15px 0; border-left: 4px solid #ddd; padding: 0 15px; color: #777;">
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">是单列集合的顶层接口，表示一组对象，这些对象也称为Collection的元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">JDK不提供此类接口的任何实现（没有实现类），通过子接口（list和Set）的实现类调用其方法</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">创建Collection集合对象的方法：通过多态方式由子接口的实现类创建，如ArrayList</li>
+</ul>
+</blockquote>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">2. collection集合常用方法</h4>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;">Boolean add(element)：添加元素，输出结果永远为true</li>
+<li style="line-height: 160%; box-sizing: content-box;">Boolean remove(element): 移除元素，有则删除，并返回true，无则返回false</li>
+<li style="line-height: 160%; box-sizing: content-box;">void clear(): 清空集合中的元素，无返回值</li>
+<li style="line-height: 160%; box-sizing: content-box;">Boolean contains(element): 判断是否存在指定元素，存在返回true，不存在返回false</li>
+<li style="line-height: 160%; box-sizing: content-box;">Boolean isEmpty(): 判断是否为空，空为true，非空为false</li>
+<li style="line-height: 160%; box-sizing: content-box;">int size(): 返回长度</li>
+</ol>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">class</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">Collection01</span> </span>{
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">static</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">void</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">main</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">(String[] args)</span> </span>{
+        <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//多态的方法创建，调用的方法都是对collection重写后的方法</span>
+        Collection&lt;String&gt; ct = <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">new</span> ArrayList&lt;&gt;();
+
+        System.out.println(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;______test add______&quot;</span>);
+        ct.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;hello&quot;</span>);
+        <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//查看源码，该方法总是返回true</span>
+        System.out.println(ct.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;world&quot;</span>));
+        <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//collection可以存储重复数据</span>
+        ct.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;world&quot;</span>);
+        System.out.println(ct);
+
+        System.out.println(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;______test remove______&quot;</span>);
+        ct.remove(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;hello&quot;</span>);
+        System.out.println(ct.remove(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;hello&quot;</span>));
+        System.out.println(ct);
+
+        System.out.println(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;______test isEmpty______&quot;</span>);
+        System.out.println(ct.isEmpty());
+        System.out.println(ct);
+
+        System.out.println(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;______test contains______&quot;</span>);
+        System.out.println(ct.contains(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;hello&quot;</span>));
+        System.out.println(ct);
+
+        System.out.println(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;______test clear______&quot;</span>);
+        ct.clear();
+        System.out.println(ct.isEmpty());
+        System.out.println(ct);
+        
+        System.out.println(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;______test size______&quot;</span>);
+        System.out.println(ct.size());
+        System.out.println(ct);
+    }
+}
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="集合01-Collection_files/Image [1].png" type="image/png" data-filename="Image.png"/></p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">3. collection集合的遍历</h4>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;">Iterator&lt;String&gt; it = ct.iterator(); 通过方法创建迭代器，通过迭代器的方法遍历并返回元素</li>
+<li style="line-height: 160%; box-sizing: content-box;">boolean hasNext(); ：返回当前所在游标下面是否还有元素</li>
+<li style="line-height: 160%; box-sizing: content-box;">E next()：返回下一个元素</li>
+</ol>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">class</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">Collection02</span> </span>{
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">static</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">void</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">main</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">(String[] args)</span> </span>{
+
+        <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//创建collection引用的ArrayList对象</span>
+        Collection ct = <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">new</span> ArrayList&lt;&gt;();
+        ct.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;hello&quot;</span>);
+        ct.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;world&quot;</span>);
+        ct.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;world&quot;</span>);
+
+
+        Iterator&lt;String&gt; it = ct.iterator();
+
+        <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">/*
+        ArrayList类内部的iterator方法，返回了一个Iterator&lt;E&gt;类型的Itr对象
+        public Iterator&lt;E&gt; iterator() {
+        return new Itr();
+    }
+    //Itr类调用了Iterator&lt;E&gt;接口
+    private class Itr implements Iterator&lt;E&gt; {
+        内部有next和hasNext方法
+        ......
+    }
+    //将实现了Iterator&lt;E&gt;接口的类赋值给其实现类引用，相当于多态的形式
+    //可以调用接口的重写方法
+    //Iterator&lt;E&gt;接口内部也有next和hasNext方法
+    Iterator&lt;String&gt; it = ct.iterator();
+         */</span>
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">while</span>(it.hasNext()){
+            <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//System.out.println(it.next());</span>
+            <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//为了对下一个元素做操作，可以先将元素取出</span>
+            String s = it.next();
+            System.out.println(s);
+        }
+    }
+}
+</code></pre>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">4. 增强for循环遍历</h4>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">简化数组和Collection集合的遍历，其内部原理是一个lterator迭代器</li>
+</ul>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">class</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">For00</span> </span>{
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">static</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">void</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">main</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">(String[] args)</span> </span>{
+        <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">/*
+        for(元素类型 变量名:数组或collection集合){
+            可直接使用变量名
+        }
+         */</span>
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">int</span>[] arr = {<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">1</span>,<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">2</span>,<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">5</span>,<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">4</span>};
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">for</span> (<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">int</span> num:arr){
+            System.out.println(num);
+        }
+
+        List&lt;String&gt; list = <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">new</span> ArrayList&lt;&gt;();
+        list.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;hello&quot;</span>);
+        list.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;list&quot;</span>);
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">for</span>(String s:list){
+            System.out.println(s);
+        }
+
+        Collection&lt;String&gt; clt = <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">new</span> ArrayList&lt;&gt;();
+        clt.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;hello&quot;</span>);
+        clt.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;collection&quot;</span>);
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">for</span> (String s : clt){
+            System.out.println(s);
+        }
+    }
+}
+</code></pre>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="集合01-Collection_files/Image [2].png" type="image/png" data-filename="Image.png"/></p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">5. 集合的使用步骤</h4>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="集合01-Collection_files/Image [3].png" type="image/png" data-filename="Image.png"/></p>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">6. 案例-存储学生对象的集合</h4>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//学生类</span>
+<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">class</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">Student</span> </span>{
+    <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">int</span> id;
+    String name;
+
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">Student</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">()</span> </span>{
+    }
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">Student</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">(<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">int</span> id, String name)</span> </span>{
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">this</span>.id = id;
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">this</span>.name = name;
+    }
+
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">int</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">getId</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">()</span> </span>{
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">return</span> id;
+    }
+
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">void</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">setId</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">(<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">int</span> id)</span> </span>{
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">this</span>.id = id;
+    }
+
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> String <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">getName</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">()</span> </span>{
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">return</span> name;
+    }
+
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">void</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">setName</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">(String name)</span> </span>{
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">this</span>.name = name;
+    }
+
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">void</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">show</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">()</span></span>{
+        System.out.println(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;学号：&quot;</span>+id+<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;，姓名：&quot;</span>+name);
+    }
+}
+
+<span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//集合操作类</span>
+<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">class</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">StudentCollection</span> </span>{
+    <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;"><span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">public</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">static</span> <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">void</span> <span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">main</span><span style="color: #dcdcdc; line-height: 160%; box-sizing: content-box;">(String[] args)</span> </span>{
+        Collection&lt;Student&gt; ct = <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">new</span> ArrayList&lt;Student&gt;();
+        ct.add(<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">new</span> Student(<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">01</span>,<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;lily&quot;</span>));
+        ct.add(<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">new</span> Student(<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">02</span>,<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;lucy&quot;</span>));
+        ct.add(<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">new</span> Student(<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">03</span>,<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;john&quot;</span>));
+
+        Iterator&lt;Student&gt; it= ct.iterator();
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">while</span> (it.hasNext()){
+            Student st = it.next();
+            st.show();
+        }
+    }
+}
+</code></pre>
+</div><center style="display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden">%5BTOC%5D%0A%23%23%201.%20%E9%9B%86%E5%90%88%E6%A6%82%E8%BF%B0%0A%3E-%20%E5%A4%9A%E4%B8%AA%E6%95%B0%E6%8D%AE%EF%BC%8C%E4%B8%94%E6%95%B0%E6%8D%AE%E4%B8%AA%E6%95%B0%E5%8F%AF%E5%8F%98%E6%97%B6%E4%BD%BF%E7%94%A8%E9%9B%86%E5%90%88%0A%3E-%20%E9%9B%86%E5%90%88%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A%E6%8F%90%E4%BE%9B%E4%B8%80%E7%A7%8D%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E5%8F%AF%E5%8F%98%E7%9A%84%E5%AD%98%E5%82%A8%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%AD%98%E5%82%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AE%B9%E9%87%8F%E5%8F%AF%E4%BB%A5%E5%8F%91%E7%94%9F%E5%8F%98%E5%8C%96%0A%3E-%20%E5%86%85%E9%83%A8%E5%AD%98%E5%82%A8%E5%AF%B9%E8%B1%A1%EF%BC%8C%E4%B8%8D%E8%83%BD%E5%AD%98%E5%82%A8%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%8C%E9%99%A4%E9%9D%9E%E5%B0%86%E5%85%B6%E8%BD%AC%E4%B8%BA%E5%8C%85%E8%A3%85%E7%B1%BB%0A%23%23%23%23%201.1%20%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%0A*%20Collection%E6%98%AF%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88%E6%8E%A5%E5%8F%A3%EF%BC%8CMap%E6%98%AF%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88%E6%8E%A5%E5%8F%A3%0A*%20List%E5%92%8CSet%E9%83%BD%E4%B8%BACollection%E7%9A%84%E5%AD%90%E7%B1%BB%E6%8E%A5%E5%8F%A3%EF%BC%8CList%E4%B8%AD%E5%85%83%E7%B4%A0%E5%8F%AF%E9%87%8D%E5%A4%8D%EF%BC%8CSet%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%0A*%20%E4%BB%A5%E4%B8%8A%E6%8F%90%E5%88%B0%E7%9A%84%E5%9D%87%E4%B8%BA%E6%8E%A5%E5%8F%A3%EF%BC%8C%E9%9C%80%E9%80%9A%E8%BF%87%E5%AE%9E%E7%8E%B0%E7%B1%BB%E6%9D%A5%E8%B0%83%E7%94%A8%E5%85%B6%E6%96%B9%E6%B3%95%0A*%20Collection%E6%8E%A5%E5%8F%A3%E6%B2%A1%E6%9C%89%E7%9B%B4%E6%8E%A5%E5%AE%9E%E7%8E%B0%E7%B1%BB%EF%BC%8C%E9%80%9A%E8%BF%87%E5%85%B6%E5%AD%90%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB%E8%B0%83%E7%94%A8%E5%85%B6%E6%96%B9%E6%B3%95%EF%BC%88ArrayList%E7%AD%89%EF%BC%89%0A!%5B67cdf46ff2744bfc18db312c7a92df02.png%5D(en-resource%3A%2F%2Fdatabase%2F723%3A1)%0A%0A%0A%23%23%202.%20Collection%0A%23%23%23%23%201.%20%E6%A6%82%E8%BF%B0%0A%3E-%20%E6%98%AF%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88%E7%9A%84%E9%A1%B6%E5%B1%82%E6%8E%A5%E5%8F%A3%EF%BC%8C%E8%A1%A8%E7%A4%BA%E4%B8%80%E7%BB%84%E5%AF%B9%E8%B1%A1%EF%BC%8C%E8%BF%99%E4%BA%9B%E5%AF%B9%E8%B1%A1%E4%B9%9F%E7%A7%B0%E4%B8%BACollection%E7%9A%84%E5%85%83%E7%B4%A0%0A%3E-%20JDK%E4%B8%8D%E6%8F%90%E4%BE%9B%E6%AD%A4%E7%B1%BB%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%BB%E4%BD%95%E5%AE%9E%E7%8E%B0%EF%BC%88%E6%B2%A1%E6%9C%89%E5%AE%9E%E7%8E%B0%E7%B1%BB%EF%BC%89%EF%BC%8C%E9%80%9A%E8%BF%87%E5%AD%90%E6%8E%A5%E5%8F%A3%EF%BC%88list%E5%92%8CSet%EF%BC%89%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB%E8%B0%83%E7%94%A8%E5%85%B6%E6%96%B9%E6%B3%95%0A%3E-%20%E5%88%9B%E5%BB%BACollection%E9%9B%86%E5%90%88%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A%E9%80%9A%E8%BF%87%E5%A4%9A%E6%80%81%E6%96%B9%E5%BC%8F%E7%94%B1%E5%AD%90%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB%E5%88%9B%E5%BB%BA%EF%BC%8C%E5%A6%82ArrayList%0A%23%23%23%23%202.%20collection%E9%9B%86%E5%90%88%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%0A1.%20Boolean%20add(element)%EF%BC%9A%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%EF%BC%8C%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E6%B0%B8%E8%BF%9C%E4%B8%BAtrue%0A2.%20Boolean%20remove(element)%3A%20%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0%EF%BC%8C%E6%9C%89%E5%88%99%E5%88%A0%E9%99%A4%EF%BC%8C%E5%B9%B6%E8%BF%94%E5%9B%9Etrue%EF%BC%8C%E6%97%A0%E5%88%99%E8%BF%94%E5%9B%9Efalse%0A3.%20void%20clear()%3A%20%E6%B8%85%E7%A9%BA%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%EF%BC%8C%E6%97%A0%E8%BF%94%E5%9B%9E%E5%80%BC%0A4.%20Boolean%20contains(element)%3A%20%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%94%E5%9B%9Etrue%EF%BC%8C%E4%B8%8D%E5%AD%98%E5%9C%A8%E8%BF%94%E5%9B%9Efalse%0A5.%20Boolean%20isEmpty()%3A%20%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%B8%BA%E7%A9%BA%EF%BC%8C%E7%A9%BA%E4%B8%BAtrue%EF%BC%8C%E9%9D%9E%E7%A9%BA%E4%B8%BAfalse%0A6.%20int%20size()%3A%20%E8%BF%94%E5%9B%9E%E9%95%BF%E5%BA%A6%0A%0A%0A%60%60%60Java%0Apublic%20class%20Collection01%20%7B%0A%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%E5%A4%9A%E6%80%81%E7%9A%84%E6%96%B9%E6%B3%95%E5%88%9B%E5%BB%BA%EF%BC%8C%E8%B0%83%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95%E9%83%BD%E6%98%AF%E5%AF%B9collection%E9%87%8D%E5%86%99%E5%90%8E%E7%9A%84%E6%96%B9%E6%B3%95%0A%20%20%20%20%20%20%20%20Collection%3CString%3E%20ct%20%3D%20new%20ArrayList%3C%3E()%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println(%22______test%20add______%22)%3B%0A%20%20%20%20%20%20%20%20ct.add(%22hello%22)%3B%0A%20%20%20%20%20%20%20%20%2F%2F%E6%9F%A5%E7%9C%8B%E6%BA%90%E7%A0%81%EF%BC%8C%E8%AF%A5%E6%96%B9%E6%B3%95%E6%80%BB%E6%98%AF%E8%BF%94%E5%9B%9Etrue%0A%20%20%20%20%20%20%20%20System.out.println(ct.add(%22world%22))%3B%0A%20%20%20%20%20%20%20%20%2F%2Fcollection%E5%8F%AF%E4%BB%A5%E5%AD%98%E5%82%A8%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE%0A%20%20%20%20%20%20%20%20ct.add(%22world%22)%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct)%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println(%22______test%20remove______%22)%3B%0A%20%20%20%20%20%20%20%20ct.remove(%22hello%22)%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct.remove(%22hello%22))%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct)%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println(%22______test%20isEmpty______%22)%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct.isEmpty())%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct)%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println(%22______test%20contains______%22)%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct.contains(%22hello%22))%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct)%3B%0A%0A%20%20%20%20%20%20%20%20System.out.println(%22______test%20clear______%22)%3B%0A%20%20%20%20%20%20%20%20ct.clear()%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct.isEmpty())%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct)%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20System.out.println(%22______test%20size______%22)%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct.size())%3B%0A%20%20%20%20%20%20%20%20System.out.println(ct)%3B%0A%20%20%20%20%7D%0A%7D%0A%60%60%60%0A%0A!%5B1bb20d155dfb0052b9d4a6e90c7ec281.png%5D(en-resource%3A%2F%2Fdatabase%2F1167%3A1)%0A%0A%0A%23%23%23%23%203.%20collection%E9%9B%86%E5%90%88%E7%9A%84%E9%81%8D%E5%8E%86%0A1.%20Iterator%3CString%3E%20it%20%3D%20ct.iterator()%3B%20%E9%80%9A%E8%BF%87%E6%96%B9%E6%B3%95%E5%88%9B%E5%BB%BA%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%8C%E9%80%9A%E8%BF%87%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95%E9%81%8D%E5%8E%86%E5%B9%B6%E8%BF%94%E5%9B%9E%E5%85%83%E7%B4%A0%0A2.%20boolean%20hasNext()%3B%20%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%BD%93%E5%89%8D%E6%89%80%E5%9C%A8%E6%B8%B8%E6%A0%87%E4%B8%8B%E9%9D%A2%E6%98%AF%E5%90%A6%E8%BF%98%E6%9C%89%E5%85%83%E7%B4%A0%0A3.%20E%20next()%EF%BC%9A%E8%BF%94%E5%9B%9E%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%0A%0A%60%60%60Java%0Apublic%20class%20Collection02%20%7B%0A%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%0A%0A%20%20%20%20%20%20%20%20%2F%2F%E5%88%9B%E5%BB%BAcollection%E5%BC%95%E7%94%A8%E7%9A%84ArrayList%E5%AF%B9%E8%B1%A1%0A%20%20%20%20%20%20%20%20Collection%20ct%20%3D%20new%20ArrayList%3C%3E()%3B%0A%20%20%20%20%20%20%20%20ct.add(%22hello%22)%3B%0A%20%20%20%20%20%20%20%20ct.add(%22world%22)%3B%0A%20%20%20%20%20%20%20%20ct.add(%22world%22)%3B%0A%0A%0A%20%20%20%20%20%20%20%20Iterator%3CString%3E%20it%20%3D%20ct.iterator()%3B%0A%0A%20%20%20%20%20%20%20%20%2F*%0A%20%20%20%20%20%20%20%20ArrayList%E7%B1%BB%E5%86%85%E9%83%A8%E7%9A%84iterator%E6%96%B9%E6%B3%95%EF%BC%8C%E8%BF%94%E5%9B%9E%E4%BA%86%E4%B8%80%E4%B8%AAIterator%3CE%3E%E7%B1%BB%E5%9E%8B%E7%9A%84Itr%E5%AF%B9%E8%B1%A1%0A%20%20%20%20%20%20%20%20public%20Iterator%3CE%3E%20iterator()%20%7B%0A%20%20%20%20%20%20%20%20return%20new%20Itr()%3B%0A%20%20%20%20%7D%0A%20%20%20%20%2F%2FItr%E7%B1%BB%E8%B0%83%E7%94%A8%E4%BA%86Iterator%3CE%3E%E6%8E%A5%E5%8F%A3%0A%20%20%20%20private%20class%20Itr%20implements%20Iterator%3CE%3E%20%7B%0A%20%20%20%20%20%20%20%20%E5%86%85%E9%83%A8%E6%9C%89next%E5%92%8ChasNext%E6%96%B9%E6%B3%95%0A%20%20%20%20%20%20%20%20......%0A%20%20%20%20%7D%0A%20%20%20%20%2F%2F%E5%B0%86%E5%AE%9E%E7%8E%B0%E4%BA%86Iterator%3CE%3E%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%B1%BB%E8%B5%8B%E5%80%BC%E7%BB%99%E5%85%B6%E5%AE%9E%E7%8E%B0%E7%B1%BB%E5%BC%95%E7%94%A8%EF%BC%8C%E7%9B%B8%E5%BD%93%E4%BA%8E%E5%A4%9A%E6%80%81%E7%9A%84%E5%BD%A2%E5%BC%8F%0A%20%20%20%20%2F%2F%E5%8F%AF%E4%BB%A5%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3%E7%9A%84%E9%87%8D%E5%86%99%E6%96%B9%E6%B3%95%0A%20%20%20%20%2F%2FIterator%3CE%3E%E6%8E%A5%E5%8F%A3%E5%86%85%E9%83%A8%E4%B9%9F%E6%9C%89next%E5%92%8ChasNext%E6%96%B9%E6%B3%95%0A%20%20%20%20Iterator%3CString%3E%20it%20%3D%20ct.iterator()%3B%0A%20%20%20%20%20%20%20%20%20*%2F%0A%20%20%20%20%20%20%20%20while(it.hasNext())%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2FSystem.out.println(it.next())%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%E4%B8%BA%E4%BA%86%E5%AF%B9%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E5%81%9A%E6%93%8D%E4%BD%9C%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%85%88%E5%B0%86%E5%85%83%E7%B4%A0%E5%8F%96%E5%87%BA%0A%20%20%20%20%20%20%20%20%20%20%20%20String%20s%20%3D%20it.next()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println(s)%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%60%60%60%0A%23%23%23%23%204.%20%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%0A*%20%E7%AE%80%E5%8C%96%E6%95%B0%E7%BB%84%E5%92%8CCollection%E9%9B%86%E5%90%88%E7%9A%84%E9%81%8D%E5%8E%86%EF%BC%8C%E5%85%B6%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86%E6%98%AF%E4%B8%80%E4%B8%AAlterator%E8%BF%AD%E4%BB%A3%E5%99%A8%0A%60%60%60Java%0Apublic%20class%20For00%20%7B%0A%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%0A%20%20%20%20%20%20%20%20%2F*%0A%20%20%20%20%20%20%20%20for(%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B%20%E5%8F%98%E9%87%8F%E5%90%8D%3A%E6%95%B0%E7%BB%84%E6%88%96collection%E9%9B%86%E5%90%88)%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F%E5%90%8D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20*%2F%0A%20%20%20%20%20%20%20%20int%5B%5D%20arr%20%3D%20%7B1%2C2%2C5%2C4%7D%3B%0A%20%20%20%20%20%20%20%20for%20(int%20num%3Aarr)%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println(num)%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20List%3CString%3E%20list%20%3D%20new%20ArrayList%3C%3E()%3B%0A%20%20%20%20%20%20%20%20list.add(%22hello%22)%3B%0A%20%20%20%20%20%20%20%20list.add(%22list%22)%3B%0A%20%20%20%20%20%20%20%20for(String%20s%3Alist)%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println(s)%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20Collection%3CString%3E%20clt%20%3D%20new%20ArrayList%3C%3E()%3B%0A%20%20%20%20%20%20%20%20clt.add(%22hello%22)%3B%0A%20%20%20%20%20%20%20%20clt.add(%22collection%22)%3B%0A%20%20%20%20%20%20%20%20for%20(String%20s%20%3A%20clt)%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println(s)%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%60%60%60%0A!%5B3d7b8fbbc181fdcbf0a987826b8e82ea.png%5D(en-resource%3A%2F%2Fdatabase%2F1623%3A1)%0A%0A%0A%0A%23%23%23%23%205.%20%E9%9B%86%E5%90%88%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4%0A!%5Bcd275b1dde5cf80a1a5fa3362ededa15.png%5D(en-resource%3A%2F%2Fdatabase%2F1181%3A1)%0A%0A%23%23%23%23%206.%20%E6%A1%88%E4%BE%8B-%E5%AD%98%E5%82%A8%E5%AD%A6%E7%94%9F%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%9B%86%E5%90%88%0A%60%60%60Java%0A%0A%2F%2F%E5%AD%A6%E7%94%9F%E7%B1%BB%0Apublic%20class%20Student%20%7B%0A%20%20%20%20int%20id%3B%0A%20%20%20%20String%20name%3B%0A%0A%20%20%20%20public%20Student()%20%7B%0A%20%20%20%20%7D%0A%20%20%20%20public%20Student(int%20id%2C%20String%20name)%20%7B%0A%20%20%20%20%20%20%20%20this.id%20%3D%20id%3B%0A%20%20%20%20%20%20%20%20this.name%20%3D%20name%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20int%20getId()%20%7B%0A%20%20%20%20%20%20%20%20return%20id%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20setId(int%20id)%20%7B%0A%20%20%20%20%20%20%20%20this.id%20%3D%20id%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20String%20getName()%20%7B%0A%20%20%20%20%20%20%20%20return%20name%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20setName(String%20name)%20%7B%0A%20%20%20%20%20%20%20%20this.name%20%3D%20name%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20show()%7B%0A%20%20%20%20%20%20%20%20System.out.println(%22%E5%AD%A6%E5%8F%B7%EF%BC%9A%22%2Bid%2B%22%EF%BC%8C%E5%A7%93%E5%90%8D%EF%BC%9A%22%2Bname)%3B%0A%20%20%20%20%7D%0A%7D%0A%0A%2F%2F%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C%E7%B1%BB%0Apublic%20class%20StudentCollection%20%7B%0A%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%20%7B%0A%20%20%20%20%20%20%20%20Collection%3CStudent%3E%20ct%20%3D%20new%20ArrayList%3CStudent%3E()%3B%0A%20%20%20%20%20%20%20%20ct.add(new%20Student(01%2C%22lily%22))%3B%0A%20%20%20%20%20%20%20%20ct.add(new%20Student(02%2C%22lucy%22))%3B%0A%20%20%20%20%20%20%20%20ct.add(new%20Student(03%2C%22john%22))%3B%0A%0A%20%20%20%20%20%20%20%20Iterator%3CStudent%3E%20it%3D%20ct.iterator()%3B%0A%20%20%20%20%20%20%20%20while%20(it.hasNext())%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20Student%20st%20%3D%20it.next()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20st.show()%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D%0A%60%60%60%0A%0A%0A%0A</center></span>
+</div></body></html> 
