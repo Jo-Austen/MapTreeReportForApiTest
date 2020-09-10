@@ -1,0 +1,146 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/600753 (zh-CN, DDL); Windows/10.0.0 (Win64);"/>
+  <meta name="content-class" content="yinxiang.markdown"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="577"/>
+
+<div><span><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><div style="line-height: 160%; box-sizing: content-box;"><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">Collection
+</a><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">常用方法
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">可用的迭代方法
+</a></li></ul></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">1. List
+</a><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">常用方法
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">可用的迭代方法
+</a></li></ul></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">1.1 ArrayList
+</a><ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;"><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">常用方法
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">迭代方法
+</a></li></ul></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">1.2 LinkedList特有的方法
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">集合的并发修改异常
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">2. Set
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">2.1 HashSet
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">2.2 LinkedHashSet
+</a></li><li style="line-height: 160%; box-sizing: content-box; position: relative;"><a style="line-height: 160%; box-sizing: content-box; text-decoration: underline; color: #5286bc;">2.3 TreeSet
+</a></li></ul></div><h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">Collection</h2>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">常用方法</h4>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">Boolean add(element)</strong>：添加元素，输出结果永远为true</li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">Boolean remove(element)</strong>: 移除元素，有则删除，并返回true，无则返回false</li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">void clear()</strong>: 清空集合中的元素，无返回值</li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">Boolean contains(element):</strong> 判断是否存在指定元素，存在返回true，不存在返回false</li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">Boolean isEmpty():</strong> 判断是否为空，空为true，非空为false</li>
+<li style="line-height: 160%; box-sizing: content-box;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">int size():</strong> 返回长度</li>
+</ol>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">可用的迭代方法</h4>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;">Iterator&lt;String&gt; it = ct.iterator(); 通过方法创建迭代器，通过迭代器的方法遍历并返回元素：hasNext()，next()</li>
+<li style="line-height: 160%; box-sizing: content-box;">增强for循环遍历</li>
+<li style="line-height: 160%; box-sizing: content-box;">普通for</li>
+</ol>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">1. List</h2>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">常用方法</h4>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">void add(index,element)</strong>，没有返回值</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">E remove(index)</strong>，返回被删除的元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">E set(index,element)</strong>，返回被修改的元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;"><strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">E get(index)</strong>，返回获取的元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">继承自Collection的方法</li>
+</ul>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">可用的迭代方法</h4>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;">列表迭代器，继承Iterator：ListIterator&lt;String&gt; lt = list.listIterator()，相比较iterator增加了反向遍历的方法：E previous()和Boolean hasPrevious()</li>
+<li style="line-height: 160%; box-sizing: content-box;">和Collection相同的迭代方法</li>
+</ol>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">1.1 ArrayList</h2>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">常用方法</h4>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">和List相同</li>
+</ul>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">迭代方法</h4>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">同以上</li>
+</ul>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">1.2 LinkedList特有的方法</h2>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">void addFirst(E)：在集合开头添加元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">void addLast(E)：在集合末尾添加元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">E getFirst()：返回集合中的第一个元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">E getLast()：返回集合中的最后一个元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">E removeFirst()：删除并返回集合中的第一个元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">E removeLast()：删除并返回集合中的最后一个元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">其它同上</li>
+</ul>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">集合的并发修改异常</h2>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">http://www.manongjc.com/article/48905.html</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">ConcurrentModificationException()：并发修改异常</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">产生原因：迭代器遍历过程中，通过集合对象修改了集合的长度（add、remove，修改单个元素的内容不会影响），使得迭代器获取到的预期修改次数和集合实际修改次数不一致</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">解决方法：1. 不采用迭代器迭代，而采用普通for循环；2. 使用迭代器自带的add、remove方法修改</li>
+</ul>
+<pre style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"><code style="display: block; overflow-x: auto; background: #1e1e1e; line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; letter-spacing: -.3px; padding: 18px; color: #f4f4f4; white-space: pre-wrap;">
+        ListIterator&lt;String&gt; lt = list.listIterator();
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">while</span> (lt.hasNext()){
+            String s = lt.next();
+            <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">if</span> (s.equals(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;world&quot;</span>)){
+                lt.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;beautiful&quot;</span>); <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//在world后面加beautiful</span>
+            }
+        }
+
+
+        System.out.println(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;________________&quot;</span>);
+
+        <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//for循环+get</span>
+        <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">for</span>(<span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">int</span> i =<span style="color: #b8d7a3; line-height: 160%; box-sizing: content-box;">0</span>;i&lt;list.size();i++){
+            String s = list.get(i);
+            <span style="color: #569cd6; line-height: 160%; box-sizing: content-box;">if</span> (s.equals(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;world&quot;</span>)){
+                list.add(<span style="color: #d69d85; line-height: 160%; box-sizing: content-box;">&quot;beautiful&quot;</span>); <span style="color: #57a64a; font-style: italic; line-height: 160%; box-sizing: content-box;">//在集合的最后加beautiful</span>
+            }
+        }
+        
+        
+        
+       
+</code></pre>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">2. Set</h2>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">不包含重复元素，没有带索引的方法，只能通过迭代器遍历</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">其实现类内部元素部分有序，部分无序</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">继承自collection，含有collection的方法</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">是接口，不能直接实例化，可以用其实现类HashSet和TreeSet实现其方法</li>
+</ul>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">2.1 HashSet</h2>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">底层数据结构是哈希表</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">不保证存储和取出元素的顺序一致，和Set一样，无法使用索引，也不包含重复元素（根据哈希值，内容判断）</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">默认长度是16，即0-15</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">内容相同的new对象，内存地址不同。可以重写equals和hashcode方法，从而可以使得内容相同的对象无法重复</li>
+</ul>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">2.2 LinkedHashSet</h2>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">哈希表和链表实现的Set结构</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">哈希表保证了元素的唯一性（无法存储重复元素）</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">链表保证的元素存入和取出顺序的一致性（有序）</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">没有索引方法</li>
+</ul>
+<h2 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 34px; border-bottom: 1px solid #dbdbdb; color: #333;">2.3 TreeSet</h2>
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">没有带索引的方法</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">不包含重复元素</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">根据构造方法而按照一定规则排序，适用于需要自定义排序的情况
+<ul style="line-height: 160%; box-sizing: content-box; display: block; list-style-type: disc; padding-left: 30px; margin: 6px 0 10px; color: #333; margin-top: 0; margin-bottom: 0;">
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">TreeSet()：无参构造根据元素Comparable接口的compareTo方法确定排序</li>
+<li style="line-height: 160%; box-sizing: content-box; position: relative;">TreeSet(Comparator comparator)：根据指定的比较器进行排序</li>
+</ul>
+</li>
+</ul>
+</div><center style="display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden">%5Btoc%5D%0A%23%23%20Collection%0A%23%23%23%23%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%0A1.%20**Boolean%20add(element)**%EF%BC%9A%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%EF%BC%8C%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E6%B0%B8%E8%BF%9C%E4%B8%BAtrue%0A2.%20**Boolean%20remove(element)**%3A%20%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0%EF%BC%8C%E6%9C%89%E5%88%99%E5%88%A0%E9%99%A4%EF%BC%8C%E5%B9%B6%E8%BF%94%E5%9B%9Etrue%EF%BC%8C%E6%97%A0%E5%88%99%E8%BF%94%E5%9B%9Efalse%0A3.%20**void%20clear()**%3A%20%E6%B8%85%E7%A9%BA%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%EF%BC%8C%E6%97%A0%E8%BF%94%E5%9B%9E%E5%80%BC%0A4.%20**Boolean%20contains(element)%3A**%20%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%94%E5%9B%9Etrue%EF%BC%8C%E4%B8%8D%E5%AD%98%E5%9C%A8%E8%BF%94%E5%9B%9Efalse%0A5.%20**Boolean%20isEmpty()%3A**%20%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%B8%BA%E7%A9%BA%EF%BC%8C%E7%A9%BA%E4%B8%BAtrue%EF%BC%8C%E9%9D%9E%E7%A9%BA%E4%B8%BAfalse%0A6.%20**int%20size()%3A**%20%E8%BF%94%E5%9B%9E%E9%95%BF%E5%BA%A6%0A%0A%23%23%23%23%20%E5%8F%AF%E7%94%A8%E7%9A%84%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%0A1.%20Iterator%3CString%3E%20it%20%3D%20ct.iterator()%3B%20%E9%80%9A%E8%BF%87%E6%96%B9%E6%B3%95%E5%88%9B%E5%BB%BA%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%8C%E9%80%9A%E8%BF%87%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95%E9%81%8D%E5%8E%86%E5%B9%B6%E8%BF%94%E5%9B%9E%E5%85%83%E7%B4%A0%EF%BC%9AhasNext()%EF%BC%8Cnext()%0A2.%20%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%0A3.%20%E6%99%AE%E9%80%9Afor%0A%0A%23%23%201.%20List%0A%23%23%23%23%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%0A*%20**void%20add(index%2Celement)**%EF%BC%8C%E6%B2%A1%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC%0A*%20**E%20remove(index)**%EF%BC%8C%E8%BF%94%E5%9B%9E%E8%A2%AB%E5%88%A0%E9%99%A4%E7%9A%84%E5%85%83%E7%B4%A0%0A*%20**E%20set(index%2Celement)**%EF%BC%8C%E8%BF%94%E5%9B%9E%E8%A2%AB%E4%BF%AE%E6%94%B9%E7%9A%84%E5%85%83%E7%B4%A0%0A*%20**E%20get(index)**%EF%BC%8C%E8%BF%94%E5%9B%9E%E8%8E%B7%E5%8F%96%E7%9A%84%E5%85%83%E7%B4%A0%0A*%20%E7%BB%A7%E6%89%BF%E8%87%AACollection%E7%9A%84%E6%96%B9%E6%B3%95%0A%0A%23%23%23%23%20%E5%8F%AF%E7%94%A8%E7%9A%84%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%0A%0A1.%20%E5%88%97%E8%A1%A8%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%8C%E7%BB%A7%E6%89%BFIterator%EF%BC%9AListIterator%3CString%3E%20lt%20%3D%20list.listIterator()%EF%BC%8C%E7%9B%B8%E6%AF%94%E8%BE%83iterator%E5%A2%9E%E5%8A%A0%E4%BA%86%E5%8F%8D%E5%90%91%E9%81%8D%E5%8E%86%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9AE%20previous()%E5%92%8CBoolean%20hasPrevious()%0A2.%20%E5%92%8CCollection%E7%9B%B8%E5%90%8C%E7%9A%84%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%0A%0A%0A%23%23%201.1%20ArrayList%0A%23%23%23%23%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%0A*%20%E5%92%8CList%E7%9B%B8%E5%90%8C%0A%0A%23%23%23%23%20%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%0A*%20%E5%90%8C%E4%BB%A5%E4%B8%8A%0A%0A%23%23%201.2%20LinkedList%E7%89%B9%E6%9C%89%E7%9A%84%E6%96%B9%E6%B3%95%0A%0A*%20void%20addFirst(E)%EF%BC%9A%E5%9C%A8%E9%9B%86%E5%90%88%E5%BC%80%E5%A4%B4%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%0A*%20void%20addLast(E)%EF%BC%9A%E5%9C%A8%E9%9B%86%E5%90%88%E6%9C%AB%E5%B0%BE%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%0A*%20E%20getFirst()%EF%BC%9A%E8%BF%94%E5%9B%9E%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%0A*%20E%20getLast()%EF%BC%9A%E8%BF%94%E5%9B%9E%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%0A*%20E%20removeFirst()%EF%BC%9A%E5%88%A0%E9%99%A4%E5%B9%B6%E8%BF%94%E5%9B%9E%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%0A*%20E%20removeLast()%EF%BC%9A%E5%88%A0%E9%99%A4%E5%B9%B6%E8%BF%94%E5%9B%9E%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%0A*%20%E5%85%B6%E5%AE%83%E5%90%8C%E4%B8%8A%0A%0A%0A%0A%0A%0A%23%23%20%E9%9B%86%E5%90%88%E7%9A%84%E5%B9%B6%E5%8F%91%E4%BF%AE%E6%94%B9%E5%BC%82%E5%B8%B8%0A*%20http%3A%2F%2Fwww.manongjc.com%2Farticle%2F48905.html%0A*%20ConcurrentModificationException()%EF%BC%9A%E5%B9%B6%E5%8F%91%E4%BF%AE%E6%94%B9%E5%BC%82%E5%B8%B8%0A*%20%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0%EF%BC%9A%E8%BF%AD%E4%BB%A3%E5%99%A8%E9%81%8D%E5%8E%86%E8%BF%87%E7%A8%8B%E4%B8%AD%EF%BC%8C%E9%80%9A%E8%BF%87%E9%9B%86%E5%90%88%E5%AF%B9%E8%B1%A1%E4%BF%AE%E6%94%B9%E4%BA%86%E9%9B%86%E5%90%88%E7%9A%84%E9%95%BF%E5%BA%A6%EF%BC%88add%E3%80%81remove%EF%BC%8C%E4%BF%AE%E6%94%B9%E5%8D%95%E4%B8%AA%E5%85%83%E7%B4%A0%E7%9A%84%E5%86%85%E5%AE%B9%E4%B8%8D%E4%BC%9A%E5%BD%B1%E5%93%8D%EF%BC%89%EF%BC%8C%E4%BD%BF%E5%BE%97%E8%BF%AD%E4%BB%A3%E5%99%A8%E8%8E%B7%E5%8F%96%E5%88%B0%E7%9A%84%E9%A2%84%E6%9C%9F%E4%BF%AE%E6%94%B9%E6%AC%A1%E6%95%B0%E5%92%8C%E9%9B%86%E5%90%88%E5%AE%9E%E9%99%85%E4%BF%AE%E6%94%B9%E6%AC%A1%E6%95%B0%E4%B8%8D%E4%B8%80%E8%87%B4%0A*%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%EF%BC%9A1.%20%E4%B8%8D%E9%87%87%E7%94%A8%E8%BF%AD%E4%BB%A3%E5%99%A8%E8%BF%AD%E4%BB%A3%EF%BC%8C%E8%80%8C%E9%87%87%E7%94%A8%E6%99%AE%E9%80%9Afor%E5%BE%AA%E7%8E%AF%EF%BC%9B2.%20%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E5%99%A8%E8%87%AA%E5%B8%A6%E7%9A%84add%E3%80%81remove%E6%96%B9%E6%B3%95%E4%BF%AE%E6%94%B9%0A%0A%60%60%60java%0A%0A%20%20%20%20%20%20%20%20ListIterator%3CString%3E%20lt%20%3D%20list.listIterator()%3B%0A%20%20%20%20%20%20%20%20while%20(lt.hasNext())%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20String%20s%20%3D%20lt.next()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(s.equals(%22world%22))%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20lt.add(%22beautiful%22)%3B%20%2F%2F%E5%9C%A8world%E5%90%8E%E9%9D%A2%E5%8A%A0beautiful%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%0A%0A%20%20%20%20%20%20%20%20System.out.println(%22________________%22)%3B%0A%0A%20%20%20%20%20%20%20%20%2F%2Ffor%E5%BE%AA%E7%8E%AF%2Bget%0A%20%20%20%20%20%20%20%20for(int%20i%20%3D0%3Bi%3Clist.size()%3Bi%2B%2B)%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20String%20s%20%3D%20list.get(i)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(s.equals(%22world%22))%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20list.add(%22beautiful%22)%3B%20%2F%2F%E5%9C%A8%E9%9B%86%E5%90%88%E7%9A%84%E6%9C%80%E5%90%8E%E5%8A%A0beautiful%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%0A%60%60%60%0A%0A%23%23%202.%20Set%0A*%20%E4%B8%8D%E5%8C%85%E5%90%AB%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%EF%BC%8C%E6%B2%A1%E6%9C%89%E5%B8%A6%E7%B4%A2%E5%BC%95%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%8C%E5%8F%AA%E8%83%BD%E9%80%9A%E8%BF%87%E8%BF%AD%E4%BB%A3%E5%99%A8%E9%81%8D%E5%8E%86%0A*%20%E5%85%B6%E5%AE%9E%E7%8E%B0%E7%B1%BB%E5%86%85%E9%83%A8%E5%85%83%E7%B4%A0%E9%83%A8%E5%88%86%E6%9C%89%E5%BA%8F%EF%BC%8C%E9%83%A8%E5%88%86%E6%97%A0%E5%BA%8F%0A*%20%E7%BB%A7%E6%89%BF%E8%87%AAcollection%EF%BC%8C%E5%90%AB%E6%9C%89collection%E7%9A%84%E6%96%B9%E6%B3%95%0A*%20%E6%98%AF%E6%8E%A5%E5%8F%A3%EF%BC%8C%E4%B8%8D%E8%83%BD%E7%9B%B4%E6%8E%A5%E5%AE%9E%E4%BE%8B%E5%8C%96%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%E5%85%B6%E5%AE%9E%E7%8E%B0%E7%B1%BBHashSet%E5%92%8CTreeSet%E5%AE%9E%E7%8E%B0%E5%85%B6%E6%96%B9%E6%B3%95%0A%0A%23%23%202.1%20HashSet%0A*%20%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%98%AF%E5%93%88%E5%B8%8C%E8%A1%A8%0A*%20%E4%B8%8D%E4%BF%9D%E8%AF%81%E5%AD%98%E5%82%A8%E5%92%8C%E5%8F%96%E5%87%BA%E5%85%83%E7%B4%A0%E7%9A%84%E9%A1%BA%E5%BA%8F%E4%B8%80%E8%87%B4%EF%BC%8C%E5%92%8CSet%E4%B8%80%E6%A0%B7%EF%BC%8C%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E7%B4%A2%E5%BC%95%EF%BC%8C%E4%B9%9F%E4%B8%8D%E5%8C%85%E5%90%AB%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%EF%BC%88%E6%A0%B9%E6%8D%AE%E5%93%88%E5%B8%8C%E5%80%BC%EF%BC%8C%E5%86%85%E5%AE%B9%E5%88%A4%E6%96%AD%EF%BC%89%0A*%20%E9%BB%98%E8%AE%A4%E9%95%BF%E5%BA%A6%E6%98%AF16%EF%BC%8C%E5%8D%B30-15%0A*%20%E5%86%85%E5%AE%B9%E7%9B%B8%E5%90%8C%E7%9A%84new%E5%AF%B9%E8%B1%A1%EF%BC%8C%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E4%B8%8D%E5%90%8C%E3%80%82%E5%8F%AF%E4%BB%A5%E9%87%8D%E5%86%99equals%E5%92%8Chashcode%E6%96%B9%E6%B3%95%EF%BC%8C%E4%BB%8E%E8%80%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E5%BE%97%E5%86%85%E5%AE%B9%E7%9B%B8%E5%90%8C%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%97%A0%E6%B3%95%E9%87%8D%E5%A4%8D%0A%0A%23%23%202.2%20LinkedHashSet%0A*%20%E5%93%88%E5%B8%8C%E8%A1%A8%E5%92%8C%E9%93%BE%E8%A1%A8%E5%AE%9E%E7%8E%B0%E7%9A%84Set%E7%BB%93%E6%9E%84%0A*%20%E5%93%88%E5%B8%8C%E8%A1%A8%E4%BF%9D%E8%AF%81%E4%BA%86%E5%85%83%E7%B4%A0%E7%9A%84%E5%94%AF%E4%B8%80%E6%80%A7%EF%BC%88%E6%97%A0%E6%B3%95%E5%AD%98%E5%82%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%EF%BC%89%0A*%20%E9%93%BE%E8%A1%A8%E4%BF%9D%E8%AF%81%E7%9A%84%E5%85%83%E7%B4%A0%E5%AD%98%E5%85%A5%E5%92%8C%E5%8F%96%E5%87%BA%E9%A1%BA%E5%BA%8F%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7%EF%BC%88%E6%9C%89%E5%BA%8F%EF%BC%89%0A*%20%E6%B2%A1%E6%9C%89%E7%B4%A2%E5%BC%95%E6%96%B9%E6%B3%95%0A%0A%23%23%202.3%20TreeSet%0A*%20%E6%B2%A1%E6%9C%89%E5%B8%A6%E7%B4%A2%E5%BC%95%E7%9A%84%E6%96%B9%E6%B3%95%0A*%20%E4%B8%8D%E5%8C%85%E5%90%AB%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%0A*%20%E6%A0%B9%E6%8D%AE%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E8%80%8C%E6%8C%89%E7%85%A7%E4%B8%80%E5%AE%9A%E8%A7%84%E5%88%99%E6%8E%92%E5%BA%8F%EF%BC%8C%E9%80%82%E7%94%A8%E4%BA%8E%E9%9C%80%E8%A6%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F%E7%9A%84%E6%83%85%E5%86%B5%0A%20%20%20%20*%20TreeSet()%EF%BC%9A%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E6%A0%B9%E6%8D%AE%E5%85%83%E7%B4%A0Comparable%E6%8E%A5%E5%8F%A3%E7%9A%84compareTo%E6%96%B9%E6%B3%95%E7%A1%AE%E5%AE%9A%E6%8E%92%E5%BA%8F%0A%20%20%20%20*%20TreeSet(Comparator%20comparator)%EF%BC%9A%E6%A0%B9%E6%8D%AE%E6%8C%87%E5%AE%9A%E7%9A%84%E6%AF%94%E8%BE%83%E5%99%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F</center></span>
+</div></body></html> 
